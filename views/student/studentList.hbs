@@ -1,0 +1,36 @@
+    <a class="btn btn-success" href="/student/add">Add</a>
+    <iframe width="110" height="200" src="https://www.myinstants.com/instant/mac-quack-83896/embed/">ga</iframe>
+<div class="container text-center mt-3 mb-3">
+    <table class="table table-warning">
+        <tr colspan="9">
+            <h1 class="text text-primary">Student List</h1>              
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>Class</th>
+            <th>Image</th>
+            <th>GPA</th>
+            <th>Student Year</th>
+            <th>Menu</th>
+        </tr>
+        {{#each students }}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{ dateFormat dob "DD/MM/YYYY" }}</td>
+            <td>{{gender}}</td>
+            <td>{{department}}</td>
+            <td>{{class}}</td>
+            <td><img src="/images/{{image}}" alt="" width="100" height="100"></td>
+            <td>{{gpa}}</td>
+            <td>{{studentYear}}</td>            
+            <td>
+                <a class="btn btn-warning" href="/student/edit/{{_id}}" >Edit</a>
+                <a class="btn btn-danger" href="/student/delete/{{_id}}" onclick="return confirm('Delete?')">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

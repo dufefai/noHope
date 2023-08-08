@@ -1,0 +1,46 @@
+<div class="container col-md-8 mt-3 mb-3 card bg-light">
+    <form action="/student/add" method ="post"> 
+        <h1 class="text text-danger text-uppercase mt-3">Add new student</h1>
+        <div class="form-group">
+            <label class="text text-success" for="">Full Name</label>
+            <input class="form-control" type="text" name="name" id="" required>
+        </div>
+        <div class="form-group">
+            <label class="text text-success" for="">Date of Birth</label>
+            <input class="form-control" type="date" name="dob" id="" required>
+        </div>
+        <div class="form-group">
+            <label class="text text-success" for="">Gender</label><br>
+            Male <input type="radio" name="gender" value="male" required>
+            Female <input  type="radio" name="gender" value="female" required>
+            Co 7 mau <input type="radio" name="gender" value="co 7 mau" required>
+        </div>
+        <div class="form-group">
+            <label class="text text-success" for="">Department</label>
+            <select class="form-control" name="department" id="">
+                <option value="IT">IT</option>
+                <option value="Business">Business</option>
+                <option value="Designer">Designer</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="text text-success" for="">Class</label>
+            <input class="form-control" type="text" name="class" id="" required>
+        </div>
+        <div class="form-group">
+            <label class="text text-success" for="">Image</label>
+            <input class="form-control" type="file" name="image" id="" required>
+        </div>
+        <div class="form-group">
+            <label class="text text-success" for="">GPA</label>
+            <input class="form-control" type="text" name="gpa" id="" required>
+        </div>
+        <div class="form-group">
+            <label class="text text-success" for="">Student Year</label>
+            <input class="form-control" type="number" name="studentYear" id="" required min="1" max="4">
+        </div>
+        <div class="form-group">
+            <input class="btn btn-success mt-3" type="submit" value="Add">
+        </div>
+    </form>
+</div>
